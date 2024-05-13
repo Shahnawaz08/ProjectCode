@@ -26,6 +26,10 @@ public class controller {
     public String sayHelloDelete() {
         return "Hello!";
     }
+    @PostMapping("/bye/{name}")
+    public String byePost(@PathVariable("name") String name) {
+        return "Bye post.."+name;
+    }
     @RequestMapping("/bye/{name}")
     public String bye(@PathVariable("name") String name) {
         return "Bye.."+name;
